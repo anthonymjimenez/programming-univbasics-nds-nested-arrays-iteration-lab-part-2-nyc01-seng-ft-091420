@@ -3,10 +3,7 @@ def find_min_in_nested_arrays(src)
   src.length.times do |x| # length of the array
     lowestNum = nil
     src[x].length.times do |y|
-      if y == 0
-        lowestNum = src[x][y]
-      end
-      if src[x][y] < lowestNum
+      if src[x][y] < lowestNum || y == 0
         lowestNum = src[x][y]
       end
     end
